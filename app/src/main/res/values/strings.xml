@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name"> ПОГОДА </string>
+    <string name="app_name">ПОГОДА</string>
     <string name="weather">weather</string>
+    <string name="kislovodsk">Кисловодск</string>
 </resources>

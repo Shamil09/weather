@@ -4,15 +4,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".weather"
-    tools:layout_editor_absoluteY="81dp">
+    tools:context=".weather">
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
-        android:layout_width="360dp"
+        android:layout_width="match_parent"
         android:layout_height="210dp"
-        tools:ignore="MissingConstraints,UselessLeaf">
+        android:background="@color/weatherColor"
+        tools:ignore="MissingConstraints,UselessLeaf"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="@string/kislovodsk"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="113dp"
+            android:layout_height="94dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="14dp"
+            android:layout_marginStart="13dp"
+            android:text="+29"
+            android:textColor="@color/yellow"
+            android:textSize="60sp"
+            android:textStyle="bold"
+            tools:ignore="DuplicateIds"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="13dp" />
+
+        <ImageView
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@mipmap/i1" />
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>
