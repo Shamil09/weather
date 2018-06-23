@@ -18,8 +18,8 @@ public class weather extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
         if (savedInstanceState == null)
-             mess ="Первое созданеи App - onCreate()";
-        else mess = "Следующее созданеи App - onCreate()";
+             mess ="Первое создание App - onCreate()";
+        else mess = "Следующее создание App - onCreate()";
         message(mess);
     }
 
@@ -38,7 +38,7 @@ public class weather extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        message("Тут востанавливаем ресурсы");
+        message("Тут восстанавливаем ресурсы");
     }
 
     @Override
@@ -50,19 +50,19 @@ public class weather extends AppCompatActivity {
     @Override
     public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
         super.onSaveInstanceState(outState, outPersistentState);
-        message("На всякий случай во время паузы сохроняю состояние App");
+        message("На всякий случай во время паузы сохраняю состояние App");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        message("На всякий случай во время паузы сохроняю состояние App");
+        message("На всякий случай во время паузы сохраняю состояние App");
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        message("Меня решили востановить, а так же после меня запуститься onStart()");
+        message("Меня решили восстановить, а так же после меня запуститься onStart()");
     }
 
     @Override
@@ -74,6 +74,6 @@ public class weather extends AppCompatActivity {
     @Override
     public void finish() {
         super.finish();
-        message("Почемуто вызвался метод finish()");
+        message("Почему-то вызвался метод finish()");
     }
 }
