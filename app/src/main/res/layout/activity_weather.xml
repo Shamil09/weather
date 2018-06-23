@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".weather">
+    tools:context=".weather"
+    tools:layout_editor_absoluteY="81dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="weather"
-        tools:layout_editor_absoluteX="167dp"
-        tools:layout_editor_absoluteY="246dp"
-        tools:ignore="MissingConstraints" />
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="360dp"
+        android:layout_height="210dp"
+        tools:ignore="MissingConstraints,UselessLeaf">
+
+    </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>
