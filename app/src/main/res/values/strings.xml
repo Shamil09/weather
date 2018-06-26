@@ -2,4 +2,6 @@
     <string name="app_name">ПОГОДА</string>
     <string name="weather">weather</string>
     <string name="kislovodsk">Кисловодск</string>
+    <string name="count">Count</string>
+    <string name="temperature">+29</string>
 </resources>
