@@ -4,4 +4,5 @@
     <string name="kislovodsk">Кисловодск</string>
     <string name="count">Count</string>
     <string name="temperature">+29</string>
+    <string name="create_action">cretae_action</string>
 </resources>

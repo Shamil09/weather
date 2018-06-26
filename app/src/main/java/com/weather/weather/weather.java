@@ -1,5 +1,6 @@
 package com.weather.weather;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
@@ -13,8 +14,11 @@ import es.dmoral.toasty.Toasty;
 
 public class weather extends AppCompatActivity {
     TextView textCount;
-    Button butCount;
+    Button butCount,butActiv;
     private int count=0;
+    private Boolean isPressed = false;
+    private TextView textView;
+
     private void message(String mess){
         Toasty.info(getApplicationContext(), mess, Toast.LENGTH_SHORT).show();
         Log.d("weatAPP", mess);
@@ -42,6 +46,28 @@ public class weather extends AppCompatActivity {
                 textCount.setText(((Integer)count).toString());
             }
         });
+        textView = findViewById(R.id.IDTCity);
+        if (getIntent().getExtras() != null) {
+            String TEXT = "TEXT";
+            String text = getIntent().getExtras().getString(TEXT);
+            textView.setText("Добрый день, " + text);
+        }
+
+        butActiv=findViewById(R.id.IDButNewActiv);
+        butActiv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!isPressed) {
+                    isPressed = true;
+                    startNewActivity();
+                }
+            }
+        });
+    }
+
+    private void startNewActivity() {
+        Intent intent = new Intent(this, showWeatherActivity.class);
+        startActivity(intent);
     }
 
     @Override
@@ -99,5 +125,10 @@ public class weather extends AppCompatActivity {
     public void finish() {
         super.finish();
         message("Почему-то вызвался метод finish()");
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        isPressed = false;
     }
 }
